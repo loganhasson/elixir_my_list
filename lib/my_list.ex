@@ -58,7 +58,7 @@ defmodule MyComprehension do
     for num <- 1..num, is_even(num), do: num
   end
 
-  def join(list, sep) do
+  def join(list, _sep) do
     for item <- list, into: "", do: "/#{item}"
   end
 end
@@ -72,11 +72,11 @@ defmodule MySigils do
     |> Enum.map(&("BOO#{&1}EEK"))
   end
 
-  def sigil_s(content, opts) do
+  def sigil_s(content, _opts) do
     content
   end
 
   def test_sigil_s(content) do
-    ~s(content)
+    ~s(#{content})
   end
 end
