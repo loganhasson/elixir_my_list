@@ -19,10 +19,10 @@ defmodule LearnElixir.MyList do
   def sum([]), do: 0
   def sum([h|t]), do: h + sum(t)
 
-  def reduce([], _func, acc), do: acc
-  def reduce([h|t], func, acc) do
-    result = func.(acc, h)
-    reduce(t, func, result)
+  def reduce([], acc, _func), do: acc
+  def reduce([h|t], acc, func) do
+    result = func.(h, acc)
+    reduce(t, result, func)
   end
 
   # There's probably a better way
