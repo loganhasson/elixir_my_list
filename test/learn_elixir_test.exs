@@ -1,4 +1,4 @@
-defmodule MyListTest do
+defmodule LearnElixirTest do
   use ExUnit.Case
 
   test "the truth" do

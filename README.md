@@ -1,4 +1,4 @@
-MyList
+LearnElixir
 =============
 
-** TODO: Add description **
+Exercises from LearnElixir.tv
