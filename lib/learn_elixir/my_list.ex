@@ -100,9 +100,8 @@ defmodule LearnElixir.MyList do
   """
   def reverse([]), do: reverse([], [])
   def reverse([h|t]), do: reverse([h|t], [])
-  def reverse([], acc), do: acc
-  def reverse([h|t], acc) do
-    acc = [h|acc]
-    reverse(t, acc)
+  defp reverse([], acc), do: acc
+  defp reverse([h|t], acc) do
+    reverse(t, [h|acc])
   end
 end
