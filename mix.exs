@@ -7,14 +7,28 @@ defmodule LearnElixir.Mixfile do
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     source_url: "https://github.com/loganhasson/learn_elixir",
+     description: "Exercises from LearnElixir.tv",
+     package: package,
      deps: deps]
+  end
+
+  def package do
+    [
+      files: ["lib", "mix.exs", "README.md", "sample.txt"],
+      contributors: ["Logan Hasson"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/loganhasson/learn_elixir"
+      }
+    ]
   end
 
   # Configuration for the OTP application
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :moment]]
   end
 
   # Dependencies can be Hex packages:
