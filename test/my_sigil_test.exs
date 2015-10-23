@@ -1,5 +1,5 @@
 defmodule LearnElixir.MySigilTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   import LearnElixir.MySigil
 
   setup do

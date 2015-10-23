@@ -98,7 +98,7 @@ defmodule LearnElixir.MyList do
       iex> LearnElixir.MyList.reverse(["hello", "world"])
       ["world", "hello"]
   """
-  def reverse([]), do: reverse([], [])
+  def reverse([]), do: []
   def reverse([h|t]), do: reverse([h|t], [])
   defp reverse([], acc), do: acc
   defp reverse([h|t], acc) do
