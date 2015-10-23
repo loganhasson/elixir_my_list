@@ -16,7 +16,7 @@ defmodule LearnElixir.Mixfile do
   def package do
     [
       files: ["lib", "mix.exs", "README.md", "sample.txt"],
-      contributors: ["Logan Hasson"],
+      maintainers: ["Logan Hasson"],
       licenses: ["MIT"],
       links: %{
         "GitHub" => "https://github.com/loganhasson/learn_elixir"
