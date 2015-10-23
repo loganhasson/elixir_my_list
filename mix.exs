@@ -13,7 +13,7 @@ defmodule LearnElixir.Mixfile do
      deps: deps]
   end
 
-  def package do
+  defp package do
     [
       files: ["lib", "mix.exs", "README.md", "sample.txt"],
       maintainers: ["Logan Hasson"],
